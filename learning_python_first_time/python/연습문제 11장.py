@@ -18,7 +18,6 @@ h=int(input("높이를 입력하세요 : "))
 t1=Triangle(w,h)
 print("삼각형의 면적 : %.2f"% t1.area())
 print("E11-4")
-del Triangle,Calculator,t1,c1,w,h
 class Ladder:
     def __init__(self,width1,width2,height):
         self.width1=width1
@@ -31,4 +30,4 @@ w2=int(input("윗변의 길이를 입력하세요 : "))
 h=int(input("높이를 입력하세요 : "))
 ladder1=Ladder(w1,w2,h)
 print("사다리꼴의 면적 : %.2f"%ladder1.area())
-del w1,w2,h,ladder1,Ladder
+del w1,w2,h,ladder1,Ladder,Triangle,Calculator,t1,c1,w,h
