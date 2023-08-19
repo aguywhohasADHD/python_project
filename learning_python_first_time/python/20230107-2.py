@@ -75,13 +75,13 @@ hp1="010"
 hp2="1234"
 hp3="5678"
 print(hp1,hp2,hp3, sep="-")
-price = 1000
-print(price, "원")
-print(price, "원", sep = "")
-x = 25
-y = 3.3
-animal = "호랑이"
+price=1000
+print(price,"원")
+print(price,"원",sep="")
+x=25
+y=3.3
+animal="호랑이"
 print("%d %f %s"%(x, y, animal))
-print("%.1f"% y)
+print("%.1f"%(y))
 print("문자열에는 문자 앞 뒤에 쌍 따옴표(\")를 붙인다.")
 del x,y,year,animal,price,hp1,hp2,day,month,hp3,c,n,person,avg,hello,kor,eng,math,s,score

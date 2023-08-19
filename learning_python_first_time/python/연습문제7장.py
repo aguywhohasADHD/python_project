@@ -4,8 +4,6 @@ def killometer_to_mile(killo):
     print("%d킬로미터는 %.2f 마일이다."%(killo,mile))
 a=int(input("킬로미터를 입력하세요 : "))
 killometer_to_mile(a)
-del killometer_to_mile
-del a
 print("E7-5")
 def math(a,b,c):
     if a==1:
@@ -27,10 +25,6 @@ a=int(input("원하는 연산을 선택하세요(1/2/3/4) : "))
 b=int(input("첫 번째 숫자를 입력하세요"))
 c=int(input("두 번째 숫자를 입력하세요"))
 math(a,b,c)
-del math
-del a
-del b
-del c
 print("E7-6")
 def count_char(string,x):
     count=0
@@ -42,10 +36,6 @@ test_str=input("영어 문장을 입력하세요 : ")
 character=input("알파벳 하나를 입력하세요 : ")
 num_char = count_char(test_str,character)
 print("%s 에 포함된 %s의 개수는 %d 개이다."%(test_str,character,num_char))
-del num_char
-del test_str
-del character
-del count_char
 print("E7-7")
 tup1=(10,20,30,40,50)
 def sum_tup(numbers):
@@ -55,8 +45,6 @@ def sum_tup(numbers):
     return total
 total=sum_tup(tup1)
 print("튜플의 합계 :",total)
-del sum_tup
-del total
 print("E7-8")
 def str_reverse(string):
     result=""
@@ -67,8 +55,6 @@ def str_reverse(string):
     return result
 string=input("문자열을 입력하세요 : ")
 print(str_reverse(string))
-del str_reverse
-del string
 print("E7-9")
 def space_hyper(string):
     result=""
@@ -82,8 +68,6 @@ def space_hyper(string):
     return result
 string=input("문자열을 입력하세요 : ")
 print(space_hyper(string))
-del space_hyper
-del string
 print("E7-10")
 #인치=센티미터x0.393701
 #파운드=킬로그램x2.204623
@@ -101,9 +85,6 @@ if c==1:
 elif c==2:
     d=int(input("킬로그램 단위의 무게를 입력하세요 : "))
     convert(c,d)
-del convert
-del c
-del d
 print("S7-1")
 def isPrimeNumber(num):
     prime_yes=True
@@ -118,10 +99,6 @@ for a in range(2,n+1):
     is_prime=isPrimeNumber(a)
     if is_prime:
         print(a,end=" ")
-del a
-del isPrimeNumber
-del is_prime
-del n
 print("S7-2")
 def match_word(word,answer):
     if word==answer:
@@ -134,11 +111,6 @@ for i in eng_dict:
     string=input(eng_dict[i]+"에 맞는 영어 단어는?")
     msg=match_word(string,i)
     print(msg)
-del i
-del eng_dict
-del msg
-del string
-del match_word
 print("S7-3")
 def make_square(num):
     list_new=[]
@@ -148,6 +120,4 @@ def make_square(num):
 n=int(input("n값을 입력하세요 : "))
 list1=make_square(n)
 print(list1)
-del n
-del list1
-del make_square
+del make_square,list1,n,a,b,c,d,i,eng_dict,string,msg,match_word,isPrimeNumber,math,is_prime,convert,space_hyper,str_reverse,count_char,total,sum_tup,tup1,num_char,killometer_to_mile,test_str,character,
