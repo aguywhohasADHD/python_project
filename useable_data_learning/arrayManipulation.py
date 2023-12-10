@@ -2,10 +2,10 @@ import numpy as np
 print('\nmp.repeat 함수는 su를 rep_cnt만큼 반복한다.')
 su1=2
 rep_cnt=5
-result=np_repeat(su1,rep_cnt)
+result=np.repeat(su1,rep_cnt)
 print(type(result))
 print(result)
-array1=np,array([1,2])
+array1=np.array([1,2])
 array2=np.array([3,4])
 print('\n1번 배열')
 print(array1)
