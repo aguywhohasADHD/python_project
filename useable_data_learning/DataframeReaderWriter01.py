@@ -58,3 +58,14 @@ print(result)
 print('\n람다 함수의 사용')
 result=myframe.loc[lambda df:df['광주']>=130]
 print(result)
+print('\n#이순신과 강감찬의 부산 실적을 30으로 변경하기')
+myframe.loc[['이순신','강감찬'],['부산']]=30
+print('\n#김유신부터 광해군까지 경주 실적을 80으로 변경하시오.')
+myframe.loc['김유신':'광해군',['경주']]=80
+print('\n#연산군의 모든 실적을 50으로 변경하기')
+myframe.loc[['연산군'],:]=50
+print('\n#모든 사람의 광주 컬럼을 60으로 변경하기')
+myframe.loc[:,['광주']]=60
+print('\n#경주 실적이 60 이하인 데이터를 모두 0으로 변경하기')
+myframe.loc[myframe['경주']<=60,['경주','광주']]=0
+print(myframe)
