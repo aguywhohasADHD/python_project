@@ -46,6 +46,13 @@ for abcd in mytarget:
     mytitle=imgtag.attrs['title'].strip()
     mytitle=mytitle.replace('?','').replace(':','')
     #print(mytitle+'/'+mysrc)
-    mytuple=tuple([mutitleid,myweekday,mytitle,mysrc])
+    mytuple=tuple([mytitleid,myweekday,mytitle,mysrc])
     mylist.append(mytuple)
-    
+    #이미지 저장 함수
+    saveFile(mysrc,myweekday,mytitle)
+print(mylist)
+myframe=DataFrame(mylist,columns=['타이틀 번호','요일','제목','링크'])
+filename='cartoon.csv'
+myframe.to_csv(filename,encoding='cp949',index=False)
+print(filename+'파일로 저장됨')
+print('\n# finsidhed')
