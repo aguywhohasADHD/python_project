@@ -2,6 +2,7 @@ import time,datetime,ssl
 import pandas as pd
 import urllib.request
 from bs4 import BeautifulSoup
+from selenium import webdriver
 class ChickenStore:
     myencoding='utf-8'
     def __init__(self,brandName,url):
@@ -11,7 +12,6 @@ class ChickenStore:
         if self.brandName!='goobne':
             self.soup=self.get_request_url()
             self.driver=None
-
         if self.brandName=='pelicana':
             self.mycolumns.append('phone')
         if self.brandName in ['nene','cheogajip','goobne']:
@@ -25,6 +25,16 @@ class ChickenStore:
             self.driver=webdriver.Chrome(filepath)
             self.driver.get(self.url)
         #print('생성자 호출됨')
+#end class ChickenStore()
+    def getWebDriver(self,cmdJavaScript):
+        #cmdJavaScript:문자열로 구성된 자바 스크립트 커맨드
+        print(cmdJavaScript)
+        self.driver.execute_script(cmdJavaScript)
+        wait=5
+        #self.driver.implicitly_wait(wait)
+        time.sleep(wait)
+        mypage=self.driver.page_source
+        return BeautifulSoup(mypage,'html.parser')
     def getSoup(self):
         if self.soup==None:
             return None
